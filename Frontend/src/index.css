@@ -1,0 +1,189 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: #DDD;
+  font-family: "poppins", "sans-serif";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+/******************************   upload form   ************************************/
+
+.upload-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  margin-top: 10vh;
+  width: 500px;
+  height: 700px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+
+}
+
+.upload-form h2{
+  color: rgba(79, 79, 79, 1);
+}
+
+.upload-form h4{
+  color: rgba(130, 130, 130, 1);
+}
+
+.upload-form p{
+  color: rgba(189, 189, 189, 1);
+}
+
+.upload-form .container{
+  margin: 10% 0;
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.image-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #F6F8FB;
+  border: 1px dashed rgba(151, 190, 244, 1);
+  height: 60%;
+  width: 380px;
+  border-radius: 5px;
+}
+
+.placeholder{
+  width: 50%;
+  height: 50%;
+}
+
+.upload-form button{
+  background-color: rgba(47, 128, 237, 1);
+  color: white;
+  height: 40px;
+  width: 120px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.upload-form button:hover{
+  background-color: rgb(27, 108, 214);
+}
+
+/******************************   loading bar   ************************************/
+
+.loading-bar-container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: white;
+  padding: 0 50px;
+  margin-top: 25vh;
+  width: 500px;
+  height: 160px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  color: rgba(79, 79, 79, 1);
+}
+
+.loading-bar{
+  position: relative;
+  background-color: #DDD;
+  height: 10px;
+  width: 100%;
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+.loading-bar::before {
+  position: absolute;
+  content: "";
+  top: 50%;
+  left: -20%;
+  transform: translate(0, -50%);
+  width: 20%;
+  height: 10px;
+  border-radius: 30px;
+  background: rgba(47, 128, 237, 1);
+  animation: progress 3s forwards infinite;
+}
+@keyframes progress {
+  to {
+    left: 100%;
+  }
+}
+
+
+/******************************   Success Page   ************************************/
+
+.success-page-container{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  margin-top: 10vh;
+  padding: 20px;
+  width: 500px;
+  height: 700px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 12px 0px rgba(0, 0, 0, 0.1);
+  color: rgba(79, 79, 79, 1);
+
+}
+
+.success-page-container>.image-container{
+  width: 80%;
+  border: none;
+  border-radius: 5px;
+}
+
+.link-container{
+  width: 80%;
+  position: relative;
+}
+
+.link-container>input{
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  background-color: rgba(246, 248, 251, 1);
+  border: 1px solid rgba(224, 224, 224, 1);
+}
+
+.link-container>button{
+  position: absolute;
+  left: 80%;
+  bottom: 2%;
+  z-index: 999;
+  background-color: rgba(47, 128, 237, 1);
+  color: white;
+  border: none;
+  height: 40px;
+  width: 20%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.link-container>button:hover{
+  background-color: rgb(27, 108, 214);
+}
+
+.success-page-container span{
+  background-color: rgb(49, 153, 49);
+  color: white;
+  width: 250px;
+  height: 25px;
+  border-radius: 8px;
+  text-align: center;
+}
